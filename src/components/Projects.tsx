@@ -14,8 +14,36 @@ const projects = [
     subtitle: "AI for Decision-Ready Climate Disaster Response",
     role: "Team Member — Team Cybernauts",
     desc: "An AI-driven disaster response system that converts multi-source climate data into clear, explainable rescue priorities for faster emergency decision-making.",
-    tech: ["AI/ML", "Computer Vision", "NLP", "Explainable AI", "Weather Risk Modeling", "Data Fusion"],
+    tech: ["AI/ML", "Computer Vision", "NLP", "Explainable AI", "Weather Risk Modeling"],
     details: "AIDR leverages explainable AI to help emergency responders prioritize rescue efforts during climate disasters. The system fuses satellite imagery, weather data, and ground reports into actionable intelligence.",
+  },
+  {
+    title: "DevConnect",
+    role: "Full Stack Developer",
+    desc: "A social networking platform for developers to share projects, collaborate on code, and find mentors in real-time.",
+    tech: ["React.js", "Node.js", "Socket.io", "MongoDB", "REST API"],
+    details: "DevConnect enables developers to build profiles, showcase repos, join discussion threads, and pair-program via live code editors. Built with real-time WebSocket communication and a scalable Node.js backend.",
+  },
+  {
+    title: "SmartBudget",
+    role: "Frontend Developer",
+    desc: "A personal finance tracker with AI-powered spending insights, budget forecasting, and visual analytics dashboards.",
+    tech: ["React.js", "Chart.js", "Python", "Flask", "MySQL"],
+    details: "SmartBudget helps users track expenses, set savings goals, and receive AI-generated spending pattern analysis. Features interactive charts and automated monthly reports.",
+  },
+  {
+    title: "CloudNotes",
+    role: "Full Stack Developer",
+    desc: "A secure, cloud-synced note-taking application with Markdown support, tagging, and offline-first architecture.",
+    tech: ["React.js", "Node.js", "PostgreSQL", "JWT Auth", "PWA"],
+    details: "CloudNotes offers a distraction-free writing experience with full Markdown rendering, nested folders, tags, and end-to-end encryption. Works offline as a Progressive Web App and syncs when connected.",
+  },
+  {
+    title: "EcoTrack",
+    role: "Backend Developer",
+    desc: "An environmental monitoring dashboard that aggregates IoT sensor data to visualize air quality, water levels, and weather patterns.",
+    tech: ["Python", "Django", "REST API", "IoT", "Data Visualization"],
+    details: "EcoTrack collects real-time data from distributed IoT sensors, processes it through a Django backend, and presents actionable environmental insights through interactive dashboards and alert systems.",
   },
 ];
 
@@ -31,7 +59,7 @@ const Projects = () => {
         </h2>
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12 neon-glow" />
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p) => (
             <div
               key={p.title}
