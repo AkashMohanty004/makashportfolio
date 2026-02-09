@@ -42,7 +42,7 @@ const Hero = () => {
           <p className="font-mono text-primary text-sm mb-2 tracking-widest">&gt; WELCOME TO MY WORLD</p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
             Hi, I'm{" "}
-            <span className="text-primary neon-text">Akash Kumar Mohanty</span>
+            <span className="text-primary neon-text">Akash Kumar</span>
           </h1>
           <div className="font-mono text-xl sm:text-2xl text-accent mb-4 h-8">
             {text}
@@ -81,6 +81,13 @@ const Hero = () => {
               className="px-6 py-3 bg-primary text-primary-foreground font-display text-sm font-semibold rounded neon-glow hover:scale-105 transition-transform"
             >
               View Projects
+            </a>
+            <a
+              href="/Akash_Kumar_Resume.pdf"
+              download
+              className="px-6 py-3 border border-accent/50 text-accent font-display text-sm font-semibold rounded hover:bg-accent/10 transition-colors neon-border"
+            >
+              Download Resume
             </a>
             <a
               href="#contact"
