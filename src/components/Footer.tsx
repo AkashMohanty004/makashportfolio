@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="border-t border-primary/20 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-display text-lg font-bold text-primary neon-text tracking-widest">AKM</p>
+          <p className="font-display text-lg font-bold text-primary neon-text tracking-widest">&lt;AKASH&gt;</p>
           <div className="flex items-center gap-4">
             {[
               { icon: Github, href: "https://github.com/mkumarakash070-oss" },
