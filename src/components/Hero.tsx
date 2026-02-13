@@ -77,7 +77,7 @@ const Hero = () => {
           {/* CTA */}
           <div className="flex gap-4 justify-center lg:justify-start">
             <a
-              href="#projects"
+              href="/projects"
               className="px-6 py-3 bg-primary text-primary-foreground font-display text-sm font-semibold rounded neon-glow hover:scale-105 transition-transform"
             >
               View Projects
@@ -90,7 +90,7 @@ const Hero = () => {
               Download Resume
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="px-6 py-3 border border-primary/50 text-primary font-display text-sm font-semibold rounded hover:bg-primary/10 transition-colors neon-border"
             >
               Contact Me
@@ -101,11 +101,11 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="order-1 lg:order-2 flex justify-center">
           <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-br from-primary via-accent to-primary rounded-full blur-md opacity-60 animate-pulse-neon" />
+            <div className="absolute -inset-1 bg-gradient-to-br from-primary via-accent to-primary rounded-lg blur-md opacity-60 animate-pulse-neon" />
             <img
               src={profileImg}
               alt="Akash Kumar Mohanty"
-              className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-2 border-primary/50"
+              className="relative w-56 sm:w-72 lg:w-80 aspect-[3/4] rounded-lg object-cover object-top border-2 border-primary/50"
             />
             {/* HUD corners */}
             <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary/60" />
