@@ -44,14 +44,14 @@ const Hero = () => {
             Hi, I'm{" "}
             <span className="text-primary neon-text">Akash Kumar</span>
           </h1>
-          <div className="font-mono text-xl sm:text-2xl text-accent mb-4 h-8">
+          <div className="font-mono text-lg sm:text-2xl text-accent mb-4 h-8">
             {text}
             <span className="typing-cursor text-primary">|</span>
           </div>
-          <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider">
-            MCA Student | Full Stack Web Developer | 2+ Years Experience
+          <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider leading-relaxed">
+            MCA Student · Full Stack Web Developer · 2+ Years Experience
           </p>
-          <p className="text-sm italic text-primary/80 mb-6 font-mono">
+          <p className="text-sm italic text-primary/80 mb-6 font-mono leading-relaxed">
             "Building the Future, One Line of Code at a Time"
           </p>
           <p className="text-muted-foreground text-sm max-w-lg mb-8 leading-relaxed">
@@ -75,23 +75,23 @@ const Hero = () => {
           </div>
 
           {/* CTA */}
-          <div className="flex gap-4 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
             <a
               href="/projects"
-              className="px-6 py-3 bg-primary text-primary-foreground font-display text-sm font-semibold rounded neon-glow hover:scale-105 transition-transform"
+              className="px-5 py-2.5 bg-primary text-primary-foreground font-display text-xs sm:text-sm font-semibold rounded neon-glow hover:scale-105 transition-transform"
             >
               View Projects
             </a>
             <a
               href="/Akash_Kumar_Resume.pdf"
               download
-              className="px-6 py-3 border border-accent/50 text-accent font-display text-sm font-semibold rounded hover:bg-accent/10 transition-colors neon-border"
+              className="px-5 py-2.5 border border-accent/50 text-accent font-display text-xs sm:text-sm font-semibold rounded hover:bg-accent/10 transition-colors neon-border"
             >
               Download Resume
             </a>
             <a
               href="/contact"
-              className="px-6 py-3 border border-primary/50 text-primary font-display text-sm font-semibold rounded hover:bg-primary/10 transition-colors neon-border"
+              className="px-5 py-2.5 border border-primary/50 text-primary font-display text-xs sm:text-sm font-semibold rounded hover:bg-primary/10 transition-colors neon-border"
             >
               Contact Me
             </a>
