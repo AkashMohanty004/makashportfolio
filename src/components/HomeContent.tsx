@@ -110,16 +110,16 @@ const pillars = [
 const HomeContent = () => (
   <div className="relative">
     {/* Tech Stack Marquee */}
-    <section className="py-12 border-y border-border/50 overflow-hidden relative">
-      <p className="font-mono text-xs text-muted-foreground text-center mb-6 tracking-widest">
+    <section className="py-8 sm:py-12 border-y border-border/50 overflow-hidden relative">
+      <p className="font-mono text-[10px] sm:text-xs text-muted-foreground text-center mb-4 sm:mb-6 tracking-widest">
         &gt; TECH_STACK.map()
       </p>
       <div className="flex overflow-hidden">
-        <div className="flex gap-6 animate-marquee whitespace-nowrap">
+        <div className="flex gap-3 sm:gap-6 animate-marquee whitespace-nowrap">
           {[...techStack, ...techStack].map((t, i) => (
             <span
               key={i}
-              className="px-4 py-2 border border-primary/20 rounded text-primary font-mono text-xs sm:text-sm neon-border"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 border border-primary/20 rounded text-primary font-mono text-[10px] sm:text-sm neon-border"
             >
               {t}
             </span>
