@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SocialSidebar from "@/components/SocialSidebar";
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
