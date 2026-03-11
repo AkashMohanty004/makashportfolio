@@ -129,20 +129,20 @@ const HomeContent = () => (
     </section>
 
     {/* Engineering Pillars */}
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <p className="font-mono text-xs text-primary text-center mb-2 tracking-widest">&gt; CORE_PRINCIPLES</p>
-      <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <p className="font-mono text-[10px] sm:text-xs text-primary text-center mb-2 tracking-widest">&gt; CORE_PRINCIPLES</p>
+      <h2 className="font-display text-xl sm:text-3xl font-bold text-foreground text-center mb-6 sm:mb-10">
         Engineering Philosophy
       </h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
         {pillars.map((p) => (
           <div
             key={p.title}
-            className="group border border-border/50 rounded-lg p-5 hover:border-primary/50 transition-colors bg-card/50 hud-corner"
+            className="group border border-border/50 rounded-lg p-3 sm:p-5 hover:border-primary/50 transition-colors bg-card/50 hud-corner"
           >
-            <p.icon className="w-8 h-8 text-primary mb-3 group-hover:drop-shadow-[0_0_8px_hsl(190,100%,50%)] transition-all" />
-            <h3 className="font-display text-sm font-semibold text-foreground mb-1">{p.title}</h3>
-            <p className="font-mono text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+            <p.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-2 sm:mb-3 group-hover:drop-shadow-[0_0_8px_hsl(190,100%,50%)] transition-all" />
+            <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-1">{p.title}</h3>
+            <p className="font-mono text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
           </div>
         ))}
       </div>
