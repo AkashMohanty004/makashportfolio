@@ -66,9 +66,9 @@ const Projects = () => {
               onClick={() => setSelected(p)}
               className="bg-card border border-primary/20 rounded-lg p-6 cursor-pointer hover:border-primary/50 transition-all hover:scale-[1.02] neon-border group"
             >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-display text-lg font-semibold text-primary">{p.title}</h3>
-                <span className="font-mono text-xs px-2 py-0.5 bg-accent/10 text-accent rounded">{p.role}</span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-3">
+                <h3 className="font-display text-base sm:text-lg font-semibold text-primary">{p.title}</h3>
+                <span className="font-mono text-[10px] sm:text-xs px-2 py-0.5 bg-accent/10 text-accent rounded shrink-0 self-start sm:self-auto">{p.role}</span>
               </div>
               {p.subtitle && <p className="font-mono text-xs text-muted-foreground mb-2">{p.subtitle}</p>}
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{p.desc}</p>

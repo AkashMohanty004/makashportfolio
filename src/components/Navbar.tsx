@@ -57,22 +57,24 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-primary/20 px-4 pb-4">
-          {navLinks.map((l) => (
-            <Link
-              key={l.href}
-              to={l.href}
-              onClick={() => setMobileOpen(false)}
-              className={`block py-3 font-mono text-sm transition-colors border-b border-border/30 last:border-0 ${
-                location.pathname === l.href ? "text-primary" : "text-muted-foreground hover:text-primary"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </div>
-      )}
+      <div
+        className={`md:hidden bg-background/95 backdrop-blur-md border-b border-primary/20 px-4 overflow-hidden transition-all duration-300 ${
+          mobileOpen ? "max-h-96 pb-4" : "max-h-0 pb-0 border-b-0"
+        }`}
+      >
+        {navLinks.map((l) => (
+          <Link
+            key={l.href}
+            to={l.href}
+            onClick={() => setMobileOpen(false)}
+            className={`block py-3 font-mono text-sm transition-colors border-b border-border/30 last:border-0 ${
+              location.pathname === l.href ? "text-primary" : "text-muted-foreground hover:text-primary"
+            }`}
+          >
+            {l.label}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 };

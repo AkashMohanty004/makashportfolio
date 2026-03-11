@@ -57,12 +57,12 @@ const Skills = () => {
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12 neon-glow" />
 
         {/* Marquee */}
-        <div className="overflow-hidden mb-16 border-y border-primary/10 py-4">
+        <div className="overflow-hidden mb-10 sm:mb-16 border-y border-primary/10 py-3 sm:py-4">
           <div className="flex animate-marquee">
             {[...marqueeSkills, ...marqueeSkills].map((skill, i) => (
               <div
                 key={i}
-                className="shrink-0 mx-4 px-5 py-2 rounded border border-primary/30 text-primary font-mono text-sm neon-border whitespace-nowrap"
+                className="shrink-0 mx-2 sm:mx-4 px-3 sm:px-5 py-1.5 sm:py-2 rounded border border-primary/30 text-primary font-mono text-[10px] sm:text-sm neon-border whitespace-nowrap"
               >
                 {skill}
               </div>

@@ -110,16 +110,16 @@ const pillars = [
 const HomeContent = () => (
   <div className="relative">
     {/* Tech Stack Marquee */}
-    <section className="py-12 border-y border-border/50 overflow-hidden relative">
-      <p className="font-mono text-xs text-muted-foreground text-center mb-6 tracking-widest">
+    <section className="py-8 sm:py-12 border-y border-border/50 overflow-hidden relative">
+      <p className="font-mono text-[10px] sm:text-xs text-muted-foreground text-center mb-4 sm:mb-6 tracking-widest">
         &gt; TECH_STACK.map()
       </p>
       <div className="flex overflow-hidden">
-        <div className="flex gap-6 animate-marquee whitespace-nowrap">
+        <div className="flex gap-3 sm:gap-6 animate-marquee whitespace-nowrap">
           {[...techStack, ...techStack].map((t, i) => (
             <span
               key={i}
-              className="px-4 py-2 border border-primary/20 rounded text-primary font-mono text-xs sm:text-sm neon-border"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 border border-primary/20 rounded text-primary font-mono text-[10px] sm:text-sm neon-border"
             >
               {t}
             </span>
@@ -129,20 +129,20 @@ const HomeContent = () => (
     </section>
 
     {/* Engineering Pillars */}
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <p className="font-mono text-xs text-primary text-center mb-2 tracking-widest">&gt; CORE_PRINCIPLES</p>
-      <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <p className="font-mono text-[10px] sm:text-xs text-primary text-center mb-2 tracking-widest">&gt; CORE_PRINCIPLES</p>
+      <h2 className="font-display text-xl sm:text-3xl font-bold text-foreground text-center mb-6 sm:mb-10">
         Engineering Philosophy
       </h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
         {pillars.map((p) => (
           <div
             key={p.title}
-            className="group border border-border/50 rounded-lg p-5 hover:border-primary/50 transition-colors bg-card/50 hud-corner"
+            className="group border border-border/50 rounded-lg p-3 sm:p-5 hover:border-primary/50 transition-colors bg-card/50 hud-corner"
           >
-            <p.icon className="w-8 h-8 text-primary mb-3 group-hover:drop-shadow-[0_0_8px_hsl(190,100%,50%)] transition-all" />
-            <h3 className="font-display text-sm font-semibold text-foreground mb-1">{p.title}</h3>
-            <p className="font-mono text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+            <p.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-2 sm:mb-3 group-hover:drop-shadow-[0_0_8px_hsl(190,100%,50%)] transition-all" />
+            <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-1">{p.title}</h3>
+            <p className="font-mono text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
           </div>
         ))}
       </div>
@@ -163,21 +163,21 @@ const HomeContent = () => (
     </section>
 
     {/* Quick Notes */}
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-      <p className="font-mono text-xs text-primary text-center mb-2 tracking-widest">&gt; TECH_NOTES</p>
-      <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <p className="font-mono text-[10px] sm:text-xs text-primary text-center mb-2 tracking-widest">&gt; TECH_NOTES</p>
+      <h2 className="font-display text-xl sm:text-3xl font-bold text-foreground text-center mb-6 sm:mb-10">
         Technical Notes
       </h2>
-      <div className="grid sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
         {[
           { icon: Terminal, title: "Clean Code", note: "Readable, maintainable, well-documented. Every function has a purpose." },
           { icon: Server, title: "API Design", note: "RESTful patterns, proper status codes, versioned endpoints, rate limiting." },
           { icon: Zap, title: "Fast Iteration", note: "Agile sprints, rapid prototyping, CI/CD for instant feedback loops." },
         ].map((n) => (
-          <div key={n.title} className="border border-border/50 rounded-lg p-5 bg-card/30">
-            <n.icon className="w-6 h-6 text-accent mb-3" />
-            <h3 className="font-display text-sm font-semibold text-foreground mb-2">{n.title}</h3>
-            <p className="font-mono text-xs text-muted-foreground leading-relaxed">{n.note}</p>
+          <div key={n.title} className="border border-border/50 rounded-lg p-4 sm:p-5 bg-card/30">
+            <n.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent mb-2 sm:mb-3" />
+            <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-1 sm:mb-2">{n.title}</h3>
+            <p className="font-mono text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{n.note}</p>
           </div>
         ))}
       </div>

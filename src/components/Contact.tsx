@@ -55,17 +55,17 @@ const Contact = () => {
         </h2>
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12 neon-glow" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-16 sm:mb-20">
           {services.map((s) => (
             <div
               key={s.title}
-              className="bg-card border border-primary/20 rounded-lg p-6 text-center hover:border-primary/50 transition-all hover:scale-105 group neon-border"
+              className="bg-card border border-primary/20 rounded-lg p-3 sm:p-6 text-center hover:border-primary/50 transition-all hover:scale-105 group neon-border"
             >
-              <div className="inline-flex p-4 rounded-lg bg-primary/10 text-primary mb-4 group-hover:neon-glow transition-all">
-                <s.icon size={28} />
+              <div className="inline-flex p-2 sm:p-4 rounded-lg bg-primary/10 text-primary mb-2 sm:mb-4 group-hover:neon-glow transition-all">
+                <s.icon size={20} className="sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-display text-sm font-semibold text-foreground mb-2">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="font-display text-[10px] sm:text-sm font-semibold text-foreground mb-1 sm:mb-2 leading-tight">{s.title}</h3>
+              <p className="text-muted-foreground text-[10px] sm:text-sm leading-relaxed hidden sm:block">{s.desc}</p>
             </div>
           ))}
         </div>

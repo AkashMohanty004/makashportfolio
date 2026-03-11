@@ -79,7 +79,7 @@ const Blog = () => {
         </h2>
         <div className="w-24 h-0.5 bg-primary mx-auto mb-12 neon-glow" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {blogs.map((blog, i) => (
             <div
               key={i}
@@ -98,8 +98,8 @@ const Blog = () => {
                   {blog.date}
                 </span>
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-5">
+                <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-tight">
                   {blog.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-3 leading-relaxed">

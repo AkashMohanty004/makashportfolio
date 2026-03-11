@@ -10,7 +10,7 @@ const quickLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-primary/20 py-8">
+    <footer className="border-t border-primary/20 py-6 sm:py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top row: logo + quick links + socials */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between mb-6">
