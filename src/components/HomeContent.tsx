@@ -163,21 +163,21 @@ const HomeContent = () => (
     </section>
 
     {/* Quick Notes */}
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-      <p className="font-mono text-xs text-primary text-center mb-2 tracking-widest">&gt; TECH_NOTES</p>
-      <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <p className="font-mono text-[10px] sm:text-xs text-primary text-center mb-2 tracking-widest">&gt; TECH_NOTES</p>
+      <h2 className="font-display text-xl sm:text-3xl font-bold text-foreground text-center mb-6 sm:mb-10">
         Technical Notes
       </h2>
-      <div className="grid sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
         {[
           { icon: Terminal, title: "Clean Code", note: "Readable, maintainable, well-documented. Every function has a purpose." },
           { icon: Server, title: "API Design", note: "RESTful patterns, proper status codes, versioned endpoints, rate limiting." },
           { icon: Zap, title: "Fast Iteration", note: "Agile sprints, rapid prototyping, CI/CD for instant feedback loops." },
         ].map((n) => (
-          <div key={n.title} className="border border-border/50 rounded-lg p-5 bg-card/30">
-            <n.icon className="w-6 h-6 text-accent mb-3" />
-            <h3 className="font-display text-sm font-semibold text-foreground mb-2">{n.title}</h3>
-            <p className="font-mono text-xs text-muted-foreground leading-relaxed">{n.note}</p>
+          <div key={n.title} className="border border-border/50 rounded-lg p-4 sm:p-5 bg-card/30">
+            <n.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent mb-2 sm:mb-3" />
+            <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-1 sm:mb-2">{n.title}</h3>
+            <p className="font-mono text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{n.note}</p>
           </div>
         ))}
       </div>

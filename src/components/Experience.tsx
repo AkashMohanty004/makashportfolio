@@ -34,7 +34,7 @@ const Experience = () => {
         <h3 className="font-display text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
           <Trophy size={20} className="text-primary" /> Hackathons & Events
         </h3>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {[
             {
               title: "BPUT Hackathon",
@@ -50,16 +50,16 @@ const Experience = () => {
           ].map((h) => (
             <div
               key={h.title}
-              className="bg-card border border-accent/20 rounded-lg p-6 hover:border-accent/50 transition-all hover:scale-[1.02] group"
+              className="bg-card border border-accent/20 rounded-lg p-4 sm:p-6 hover:border-accent/50 transition-all hover:scale-[1.02] group"
             >
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-display text-sm font-semibold text-accent">{h.title}</h4>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                <h4 className="font-display text-xs sm:text-sm font-semibold text-accent">{h.title}</h4>
                 {h.badge && (
-                  <span className="font-mono text-xs px-2 py-0.5 bg-accent/10 text-accent rounded">{h.badge}</span>
+                  <span className="font-mono text-[10px] sm:text-xs px-2 py-0.5 bg-accent/10 text-accent rounded self-start sm:self-auto">{h.badge}</span>
                 )}
               </div>
-              <p className="font-mono text-primary text-sm mb-2">{h.project}</p>
-              <p className="text-muted-foreground text-sm">{h.desc}</p>
+              <p className="font-mono text-primary text-xs sm:text-sm mb-2">{h.project}</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">{h.desc}</p>
             </div>
           ))}
         </div>

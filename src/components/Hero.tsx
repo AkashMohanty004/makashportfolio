@@ -105,13 +105,13 @@ const Hero = () => {
             <img
               src={profileImg}
               alt="Akash Kumar Mohanty"
-              className="relative w-56 sm:w-72 lg:w-80 aspect-[3/4] rounded-lg object-cover object-top border-2 border-primary/50"
+              className="relative w-44 sm:w-72 lg:w-80 aspect-[3/4] rounded-lg object-cover object-top border-2 border-primary/50"
             />
             {/* HUD corners */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary/60" />
-            <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-primary/60" />
-            <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-primary/60" />
-            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-primary/60" />
+            <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/60" />
+            <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-primary/60" />
+            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-primary/60" />
+            <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-primary/60" />
           </div>
         </div>
       </div>

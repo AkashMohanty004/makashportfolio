@@ -98,8 +98,8 @@ const Blog = () => {
                   {blog.date}
                 </span>
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-5">
+                <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-tight">
                   {blog.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-3 leading-relaxed">
