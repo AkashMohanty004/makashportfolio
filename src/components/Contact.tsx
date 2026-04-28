@@ -2,6 +2,10 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, Linkedin, Github, Send, Layers, Monitor, Server, Globe } from "lucide-react";
 
+const SERVICE_ID = "service_73gjo5g";
+const TEMPLATE_ID = "template_tr2o1gi";
+const PUBLIC_KEY = "IcgQW2-CQc3ojYdZ-";
+
 const services = [
   {
     icon: Layers,
@@ -29,21 +33,50 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
     setSending(true);
+    setError(null);
+
+    const formEl = formRef.current;
+    const fd = new FormData(formEl);
+    const name = (fd.get("user_name") as string) || "";
+    const email = (fd.get("user_email") as string) || "";
+    const message = (fd.get("message") as string) || "";
+
+    // Send a plain params payload so it works regardless of the EmailJS
+    // template variable naming convention.
+    const params = {
+      user_name: name,
+      user_email: email,
+      from_name: name,
+      from_email: email,
+      reply_to: email,
+      name,
+      email,
+      message,
+      to_name: "Akash",
+    };
+
     try {
-      await emailjs.sendForm("service_73gjo5g", "template_tr2o1gi", formRef.current, "IcgQW2-CQc3ojYdZ-");
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, { publicKey: PUBLIC_KEY });
       setSent(true);
-      formRef.current.reset();
+      formEl.reset();
       setTimeout(() => setSent(false), 5000);
-    } catch {
-      alert("Failed to send. Please try again.");
+    } catch (err: any) {
+      console.error("EmailJS send failed:", err);
+      const msg =
+        (err && (err.text || err.message)) ||
+        "Failed to send. Please try again or email me directly.";
+      setError(String(msg));
+    } finally {
+      setSending(false);
     }
-    setSending(false);
   };
+
 
   return (
     <section id="contact" className="py-24 relative">
@@ -112,6 +145,9 @@ const Contact = () => {
             >
               {sending ? "Sending..." : sent ? "✓ Sent!" : <><Send size={16} /> Send Message</>}
             </button>
+            {error && (
+              <p className="font-mono text-xs text-destructive mt-2 break-words">{error}</p>
+            )}
           </form>
 
           {/* Info */}
