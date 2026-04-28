@@ -105,7 +105,7 @@ const Hero = () => {
             <img
               src={profileImg}
               alt="Akash Kumar Mohanty"
-              className="relative w-44 sm:w-72 lg:w-80 aspect-[3/4] rounded-lg object-contain border-2 border-primary/50 bg-background"
+              className="relative w-44 sm:w-72 lg:w-80 aspect-[3/4] rounded-lg object-cover border-2 border-primary/50 bg-background"
             />
             {/* HUD corners */}
             <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/60" />

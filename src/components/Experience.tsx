@@ -47,6 +47,12 @@ const Experience = () => {
               desc: "AI disaster response system — qualified for final level.",
               badge: "Finalist",
             },
+            {
+              title: "NSCIF 2026",
+              project: "National Student Conclave on Innovation",
+              desc: "Selected as finalist at the National Student Conclave on Innovation & Futures 2026.",
+              badge: "Finalist",
+            },
           ].map((h) => (
             <div
               key={h.title}
