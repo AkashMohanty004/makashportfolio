@@ -125,7 +125,7 @@ const Contact = () => {
                 { icon: Mail, label: "mkumarakash070@gmail.com", href: "mailto:mkumarakash070@gmail.com" },
                 { icon: Phone, label: "+91 9853316873", href: "tel:+919853316873" },
                 { icon: Linkedin, label: "LinkedIn Profile", href: "https://www.linkedin.com/in/akash-kumar-mohanty-99a439285/" },
-                { icon: Github, label: "mkumarakash070-oss", href: "https://github.com/mkumarakash070-oss" },
+                { icon: Github, label: "AkashMohanty004", href: "https://github.com/AkashMohanty004" },
               ].map((c) => (
                 <a
                   key={c.label}
